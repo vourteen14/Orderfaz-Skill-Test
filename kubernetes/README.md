@@ -2,19 +2,19 @@
 
 ### Start from metrics server
 
-kubectl apply -f metrics-server.yaml
+````kubectl apply -f metrics-server.yaml````
 
 ### Create deployment
 
-kubectl apply -f nginx-deployment.yaml
+````kubectl apply -f nginx-deployment.yaml````
 
 ### Create service
 
-kubectl apply -f nginx-service.yaml
+````kubectl apply -f nginx-service.yaml````
 
 ## Create horizontal pod scaling
 
-kubectl apply -f nginx-hpa.yaml
+````kubectl apply -f nginx-hpa.yaml````
 
 ## Test
 
