@@ -10,7 +10,7 @@
 
 ````mcli alias set postgresql-backup https://<MINIO-API> <ACCESS-KEY> <SECRET-KEY>````
 
-### Setup Cron
+### How to setup backup
 
 Jalankan perintah dibawah ini:
 
@@ -23,4 +23,14 @@ Tambahkan script berikut pada bagian paling bawah:
 Notes:
 * backup dibuat schedule pada jam 02:00 WIB pagi, mengikuti waktu server yang sudah menjadi WIB
 * script backup disimpan di /root/backup-script-minio.sh
-* mcli harus sudah terinstall & sudah setup alias oleh user root
+* mcli harus sudah terinstall & sudah setup minio alias untuk target bucket database backup
+
+### How to restore
+Untuk melakukan restore bisa langsung menjalankan perintah dibawah:
+
+````sudo ./restore-script-minio.sh````
+
+Perintah diatas akan melakukan listing terhadap 7 file backup terakhir pada bucket, script tersebut akan mengintruksikan untuk memilih nama backup yang akan di restore, setelah masukan nama file backup maka proses restore akan berjalan
+
+Notes:
+* mcli harus sudah terinstall & sudah setup minio alias untuk target bucket database backup
